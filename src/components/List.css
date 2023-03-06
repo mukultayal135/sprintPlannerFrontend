@@ -1,0 +1,3 @@
+.tile:nth-child(odd) {
+  background-color: #85a3d3;
+}
