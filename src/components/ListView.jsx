@@ -15,7 +15,8 @@ const style = {
   boxShadow: 4,
 };
 
-const ListView = ({ sprints, developers }) => {
+const ListView = (props) => {
+  const { sprints, developers } = props;
   return (
     <Box
       p={5}
@@ -29,6 +30,7 @@ const ListView = ({ sprints, developers }) => {
       <List heading='Sprints' contents={sprints}>
         <Sprint />
       </List>
+
       <List heading='Developers' contents={developers}>
         <Developer />
       </List>

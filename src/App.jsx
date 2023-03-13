@@ -1,5 +1,10 @@
 import * as React from 'react';
-import ListView from './components/ListView';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import ListView from './components/ListView';
+// import Input from './pages/input';
+import OutputList from './pages/outputList';
+import Home from './pages/InputPage/index'
+import DependencyGraph from './pages/DependencyGraph/index';
 
 const sprints = [
   [
@@ -92,7 +97,7 @@ const sprints = [
 ];
 
 const App = () => {
-  const getStoriesPerDeveloper = sprints.reduce((acc, sprint) => {
+  const developers = sprints.reduce((acc, sprint) => {
     sprint.forEach((story) => {
       story.developers.forEach((developer) => {
         if (!acc[developer.id]) {
@@ -105,9 +110,13 @@ const App = () => {
     return acc;
   }, []);
   return (
-    <div id='main'>
-      <ListView sprints={sprints} developers={getStoriesPerDeveloper} />
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element= {<OutputList sprints={sprints} developers={developers}/>} />
+      <Route path='/create' element={<Home/>} />
+      <Route path='/graph' element={<DependencyGraph/>} />
+    </Routes>
+    </BrowserRouter>
   );
 };
 export default App;

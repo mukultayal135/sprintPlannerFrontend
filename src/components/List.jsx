@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import './List.css';
 
-export default function List({ heading, children, contents }) {
+export default function List({ heading, contents, children }) {
   const style = {
     width: 400,
     bgcolor: '#eeeeee',
@@ -20,6 +20,7 @@ export default function List({ heading, children, contents }) {
   });
   theme = responsiveFontSizes(theme);
   return (
+
     <Box width={2 / 3} sx={{ ...style, borderRadius: 5 }}>
       <Box
         display='flex'
