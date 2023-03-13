@@ -25,14 +25,13 @@ export default function List({ heading, contents, children }) {
       <Box
         display='flex'
         sx={{
-          bgcolor: 'black',
+          bgcolor: 'lightblue',
           color: 'white',
           width: '100%',
           borderRadius: 5,
           borderBottomLeftRadius: 0,
           borderBottomRightRadius: 0,
           borderBottom: '5px solid white',
-          // borderTopRightRadius: 5,
           height: 50,
         }}
       >
