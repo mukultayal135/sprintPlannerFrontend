@@ -54,7 +54,7 @@ export default function Sprint({ content, index }) {
           <Box
             display='flex'
             sx={{
-              bgcolor: 'black',
+              bgcolor: 'lightblue',
               color: 'white',
               width: '100%',
               borderRadius: 2,
